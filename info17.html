@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vehicle details at Drive Wise Dealer.">
+  <title>Vehicle Details | Drive Wise Dealer</title>
+  <link rel="icon" href="images/CarLogo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="detail-page" data-default-vehicle="model3">
+  <header class="site-header">
+    <nav class="container navbar" aria-label="Primary navigation">
+      <a class="brand" href="home.html"><img src="images/CarLogo.png" alt="Drive Wise Dealer logo"><span class="brand-text"><strong>Drive Wise Dealer</strong><small>Driven by confidence</small></span></a>
+      <ul class="nav-links"><li><a href="home.html">Home</a></li><li><a class="active" href="product.html">Inventory</a></li><li><a href="home.html#about">About</a></li><li><a href="home.html#how-it-works">How it works</a></li><li><a href="home.html#contact">Contact</a></li></ul>
+      <div class="nav-actions"><button class="icon-button" type="button" aria-label="Open account" data-open-auth="login"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></button><button class="nav-login" type="button" data-open-auth="login">Sign in</button><a class="btn btn-sm" href="home.html#contact">Contact us</a><button class="menu-button" type="button" aria-label="Toggle menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div>
+    </nav>
+  </header>
+
+  <main class="detail-main">
+    <div class="container">
+      <div class="detail-topbar">
+        <div class="breadcrumbs"><a href="home.html">Home</a><span>/</span><a href="product.html">Inventory</a><span>/</span><span id="crumbName">Vehicle details</span></div>
+        <div class="detail-actions"><button class="detail-action" type="button" id="shareVehicle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg> Share</button><button class="detail-action" type="button" id="saveVehicle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg> Save</button></div>
+      </div>
+
+      <div class="detail-grid">
+        <section class="gallery-card reveal">
+          <div class="main-gallery-image"><img id="mainVehicleImage" src="images/toyota.jpg" alt="Vehicle image"><span class="gallery-counter" id="galleryCounter">1 / 1</span></div>
+          <div class="thumbnail-row" id="thumbnailRow"></div>
+        </section>
+
+        <aside class="vehicle-summary reveal">
+          <div class="summary-labels"><span class="summary-label accent" id="vehicleBadge">Featured</span><span class="summary-label" id="vehicleBody">Sedan</span><span class="summary-label" id="vehicleFuel">Gasoline</span></div>
+          <h1 id="vehicleName">Vehicle name</h1>
+          <span class="stock">● Available now</span>
+          <div class="summary-price"><strong id="vehiclePrice">₱0</strong><span id="financeEstimate">Estimated from ₱0/month · sample only</span></div>
+          <div class="summary-specs">
+            <div class="summary-spec"><span>Year</span><strong id="specYear">—</strong></div>
+            <div class="summary-spec"><span>Mileage</span><strong id="specMileage">—</strong></div>
+            <div class="summary-spec"><span>Transmission</span><strong id="specTransmission">—</strong></div>
+            <div class="summary-spec"><span>Engine</span><strong id="specEngine">—</strong></div>
+          </div>
+          <div class="summary-buttons"><button class="btn btn-block" type="button" id="testDriveButton">Request a test drive</button><button class="btn btn-outline btn-block" type="button" id="inquiryButton">Ask about this vehicle</button></div>
+          <p class="summary-note">No payment is collected on this frontend demo.</p>
+        </aside>
+      </div>
+
+      <div class="detail-content-grid">
+        <section class="detail-panel reveal"><p class="eyebrow">Vehicle overview</p><h2>Designed for the way you drive.</h2><p id="vehicleDescription"></p><div class="spec-table" id="specTable"></div></section>
+        <section class="detail-panel reveal"><p class="eyebrow">Highlights</p><h2>Key features</h2><div class="feature-grid"><span class="feature-chip">Premium interior finish</span><span class="feature-chip">Modern infotainment</span><span class="feature-chip">Driver assistance</span><span class="feature-chip">Reverse camera</span><span class="feature-chip">Climate control</span><span class="feature-chip">Multiple drive modes</span><span class="feature-chip">Bluetooth connectivity</span><span class="feature-chip">Complete vehicle details</span></div></section>
+      </div>
+
+      <section class="related-section"><p class="eyebrow">You may also like</p><h2>Similar vehicles</h2><div class="vehicle-grid" id="relatedVehicles"></div></section>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-grid"><div class="footer-brand"><a class="brand" href="home.html"><img src="images/CarLogo.png" alt="Drive Wise Dealer logo"><span class="brand-text"><strong>Drive Wise Dealer</strong><small>Driven by confidence</small></span></a><p>A polished automotive showroom experience for clear comparisons and confident decisions.</p></div><div class="footer-col"><h4>Explore</h4><a href="home.html">Home</a><a href="product.html">Inventory</a><a href="home.html#about">About</a><a href="home.html#contact">Contact</a></div><div class="footer-col"><h4>Support</h4><a href="home.html#contact">Book a viewing</a><a href="home.html#contact">Test drive</a><a href="home.html#contact">Vehicle inquiry</a><a href="#">Buyer guide</a></div><div class="footer-col"><h4>Vehicle updates</h4><span>Subscribe for featured listings and showroom news.</span><form class="newsletter" data-message="You are subscribed to frontend demo updates."><input type="email" required aria-label="Email address" placeholder="Email address"><button aria-label="Subscribe">→</button></form></div></div><div class="container footer-bottom"><span>© 2026 Drive Wise Dealer. Frontend concept.</span><div><a href="#">Privacy</a><a href="#">Terms</a></div></div></footer>
+
+  <div class="modal-backdrop" aria-hidden="true"><div class="auth-modal" role="dialog" aria-modal="true" aria-label="Account access"><button class="modal-close" type="button" data-close-auth aria-label="Close">×</button><div class="auth-visual"><img src="images/CarLogo.png" alt=""><h2>Keep your favorite vehicles in one place.</h2><p>Sign in to save vehicles and organize inquiries.</p></div><div class="auth-content"><section class="auth-panel active" data-panel="login"><h3>Welcome back</h3><p>Sign in to access your saved vehicles.</p><form class="auth-form" data-message="Signed in successfully in frontend demo mode."><div class="field"><label>Email address</label><input type="email" required placeholder="you@example.com"></div><div class="field"><label>Password</label><input type="password" required placeholder="Enter your password"></div><button class="btn btn-block" type="submit">Sign in</button></form><p class="auth-switch">New here? <button type="button" data-auth-switch="signup">Create account</button></p></section><section class="auth-panel" data-panel="signup"><h3>Create account</h3><p>Start saving and comparing vehicles.</p><form class="auth-form" data-message="Account created in frontend demo mode."><div class="field"><label>Full name</label><input required placeholder="Enter your full name"></div><div class="field"><label>Email address</label><input type="email" required placeholder="you@example.com"></div><div class="field"><label>Password</label><input type="password" required minlength="6" placeholder="At least 6 characters"></div><button class="btn btn-block" type="submit">Create account</button></form><p class="auth-switch">Already registered? <button type="button" data-auth-switch="login">Sign in</button></p></section></div></div></div>
+
+  <script src="inventory.js"></script>
+  <script src="shared.js"></script>
+  <script src="info.js"></script>
+</body>
+</html>
